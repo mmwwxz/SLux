@@ -1,0 +1,112 @@
+.Footer{
+    min-height: 70vh;
+    background: url("./../../assets/images/BG/Home/Footer.jpg");
+    padding: 20px 50px;
+
+    h2{
+        margin: 20px auto 0;
+        padding: 20px;
+        width: fit-content;
+    }
+
+    .borbottom{
+        width: 100px;
+        height: 10px;
+        background: #B04EFD;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 70px;
+
+        .left{
+            width: 30%;
+
+            input, textarea, select {
+                width: 80%;
+                max-width: 80%;
+                margin: 10px auto;
+                background: transparent;
+                padding: 10px 20px;
+                border: 2px solid #fff;
+                color: #fff; /* Цвет текста */
+                border-radius: 5px;
+                box-sizing: border-box; /* Убедитесь, что отступы не влияют на размер */
+            }
+
+            [type="submit"]{
+                width: 60%;
+            }
+        }
+
+        .right{
+            width: 50%;
+
+            p, a {
+                font-size: 25px;
+                font-weight: 200;
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            iframe {
+                width: 90%;
+                height: 300px;
+            }
+
+            .gmail {
+                text-decoration: underline;
+            }
+        }
+
+        select:invalid {
+            color: gray; /* цвет для placeholder */
+        }
+
+        input[type="submit"] {
+            background-color: #A73AFD; /* Зеленый цвет фона */
+            color: #fff; /* Белый цвет текста */
+            border: none; /* Убираем границы */
+            padding: 10px 20px; /* Внутренние отступы */
+            font-size: 18px; /* Размер шрифта */
+            cursor: pointer; /* Курсор в виде руки */
+            border-radius: 5px; /* Скругление углов */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный переход при наведении */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #9330E0; /* Темно-зеленый цвет при наведении */
+            transform: translateY(-2px); /* Поднимаем кнопку чуть выше при наведении */
+        }
+
+        input[type="submit"]:active {
+            background-color: #7F2AC7; /* Еще более темный цвет при клике */
+            transform: translateY(0); /* Возвращаем кнопку на место при клике */
+        }
+
+        @media (max-width:1000px) {
+            .left {
+                width: 40%;
+
+                input, textarea, select {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media (max-width:720px) {
+            .left, .right {
+                width: 100%;
+            }
+
+            .left input, .left textarea, .left select {
+                width: 100%;
+            }
+        }
+    }
+}
