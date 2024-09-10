@@ -18,7 +18,23 @@
         height: 70px;
       }
     }
-  
+
+    @font-face {
+      font-family: 'MyFont'; /* Название шрифта */
+      src: url('../../assets/fonts/didot_bold.otf') format('truetype'); /* Путь к шрифту */
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .logoText {
+      font-family: 'didot_bold.otf', sans-serif; /* Применяем локальный шрифт */
+      font-size: 34px; /* Размер текста */
+      font-weight: 700; /* Толщина шрифта */
+      color: #000; /* Цвет текста */
+      position: relative;
+      top: -17px; /* Смещаем текст вверх на 10px */
+    }
+
     .burger {
       display: none;
       cursor: pointer;
@@ -51,16 +67,14 @@
       align-items: center;
       justify-content: space-between;
       font-size: 20px;
-  
-      .btns {
-        button {
-          background: transparent;
-          padding: 5px 10px;
-          font-size: 17px;
-          border-radius: 5px;
-          border: 2px solid gray;
-        }
-      }
+
+    .scrollLink {
+        background: transparent;
+        padding: 5px 10px;
+        font-size: 17px;
+        border-radius: 5px;
+        border: 2px solid gray;
+    }
   
       .contact {
         .socialMedia {

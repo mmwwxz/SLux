@@ -1,12 +1,12 @@
-'use client'
-import { MouseEvent } from "react";
+import { MouseEvent, CSSProperties } from "react";
 
 interface ScrollLinkProps {
   target: string;
   children: React.ReactNode;
+  style?: CSSProperties; // Добавлено для поддержки стилей
 }
 
-const ScrollLink: React.FC<ScrollLinkProps> = ({ target, children }) => {
+const ScrollLink: React.FC<ScrollLinkProps> = ({ target, children, style }) => {
   const handleScroll = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     const targetElement = document.querySelector(target);
@@ -31,7 +31,7 @@ const ScrollLink: React.FC<ScrollLinkProps> = ({ target, children }) => {
   };
 
   return (
-    <a href={target} onClick={handleScroll} className="link">
+    <a href={target} onClick={handleScroll} style={style} className="link">
       {children}
     </a>
   );

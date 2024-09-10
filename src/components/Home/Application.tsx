@@ -39,7 +39,7 @@ const Application = () => {
     };
 
     return (
-        <div className={style.Application}>
+        <div className={style.Application} id="Application">
             <h2>ОСТАВЬТЕ ЗАЯВКУ, И МЫ ПЕРЕЗВОНИМ ВАМ В ТЕЧЕНИЕ 10 МИНУТ</h2>
             <form className={style.form} onSubmit={handleSubmit}>
                 <input
