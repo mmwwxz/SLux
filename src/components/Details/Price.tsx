@@ -1,8 +1,14 @@
+import React from 'react';
 import style from "./details.module.scss";
 
-const Price = () => {
+interface PriceProps {
+    image?: string;
+    title2?: string;
+}
+
+const Price: React.FC<PriceProps> = ({ image, title2 }) => {
     const pricedata = [
-        {
+{
             id: 1,
             name: "Платье трикотажное",
             p501: "680",
@@ -69,7 +75,8 @@ const Price = () => {
 
     return (
         <div className={style.Price}>
-            <h2>ЦЕНЫ НА ПОШИВ ПЛАТЬЕВ</h2>
+            <h2>{title2 || "ЦЕНЫ НА ПОШИВ ПЛАТЬЕВ"}</h2>
+            {image && <img src={image} alt="Background" className={style.image} />}
             <table className={style.table}>
                 <thead>
                     <tr className={style.head}>
@@ -95,6 +102,6 @@ const Price = () => {
             </table>
         </div>
     );
-}
+};
 
 export default Price;

@@ -77,6 +77,7 @@
             border-radius: 5px; /* Скругление углов */
             transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный переход при наведении */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+            width: auto; /* Убедитесь, что ширина автоматическая */
         }
 
         input[type="submit"]:hover {

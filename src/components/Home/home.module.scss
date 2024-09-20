@@ -1,52 +1,69 @@
-.Banner{
+.Banner {
     min-height: 100vh;
     background: url("./../../assets/images/BG/Home/Banner.jpg");
-    .title{
+
+    .title {
         font-size: 50px;
     }
-    .des{
+
+    .des {
         font-size: 30px;
-        color: #A73AFD;
+        color: #A73AFD; // Цвет, похожий на логотип Wildberries
+        font-weight: bold; // Сделаем текст жирным для лучшей видимости
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // Тень для улучшения читаемости
     }
-    .icons{
+
+    .icons {
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
         margin-top: 50px;
         width: 50%;
-        .pros{
+
+        .pros {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 25%;
             text-align: center;
-            p{
+            color: #A73AFD;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+            p {
                 font-size: 20px;
                 margin-top: 10px;
+                color: #FFFFFF; // Белый цвет для лучшей видимости
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // Тень для улучшения читаемости
             }
+
             @media (max-width: 500px) {
                 width: 50%;
                 margin-top: 50px;
             }
         }
+
         @media (max-width: 1000px) {
             width: 100%;
         }
     }
 }
-.Advantages{
-    h2{
+
+.Advantages {
+    h2 {
         font-family: Roboto Mono, sans-serif;
         font-weight: bold;
     }
-    .boxs{
+
+    .boxs {
         margin: 30px;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         width: 80%;
-        .box{
+
+        .box {
             border: 2px solid gray;
             box-shadow: -2px 2px 2px gray;
             border-radius: 5px;
@@ -57,131 +74,184 @@
             align-items: center;
             text-align: center;
             margin: 10px;
+
+            @media (max-width: 768px) {
+                width: 80%; /* Уменьшаем ширину для планшетов */
+            }
+
+            @media (max-width: 480px) {
+                width: 100%; /* Полная ширина для мобильных */
+            }
         }
     }
 }
-.Scheme{
-    background: url("./../../assets/images/BG/Home/Scheme.jpg");
 
+.Scheme {
+    background: url("./../../assets/images/BG/Home/Scheme.jpg");
     min-height: 70vh !important;
-    .icons{
+
+    .phoneLink {
+        color: #9233f5 !important; /* Устанавливаем цвет */
+        text-decoration: none; /* Убираем подчеркивание, если нужно */
+    }
+
+    .phoneLink:hover {
+        text-decoration: underline; /* Добавляем подчеркивание при наведении, если нужно */
+    }
+
+    .icons {
         margin-top: 100px;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         width: 80%;
-        .pros{
+
+        .pros {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 25%;
             text-align: center;
-            p{
+
+            p {
                 font-size: 20px;
                 margin-top: 10px;
             }
-        }
-        @media (max-width: 700px) {
-            .pros{
+
+            @media (max-width: 700px) {
                 width: 100%;
                 margin: 20px 0;
             }
         }
-        button{
+
+        button {
             margin-top: 30px;
             background-color: transparent;
             padding: 5px 10px;
             font-size: 18px;
             border: 2px solid;
-            border-radius: 2px;
+
+            @media (max-width: 500px) {
+                width: 100%; /* Полная ширина для кнопок на мобильных */
+            }
         }
     }
 }
-.About{
+
+.About {
     text-align: center;
-    .des{
+
+    .des {
         margin: 20px 0;
         width: 80%;
         font-size: 20px;
+
+        @media (max-width: 600px) {
+            font-size: 18px; /* Уменьшаем размер текста на мобильных */
+        }
     }
-    .reports{
+
+    .reports {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         width: 70%;
         margin: 20px auto;
-        .report{
+
+        .report {
             width: 33%;
-            span{
-            font-size: 65px;
+
+            span {
+                font-size: 65px;
             }
-            p{
+
+            p {
                 font-size: 30px;
             }
-            @media (max-width:700px) {
+
+            @media (max-width: 700px) {
                 width: 100px;
                 margin: 20px;
             }
+
+            @media (max-width: 480px) {
+                width: 100%; /* Полная ширина для мобильных */
+            }
         }
     }
-    .Sewing{
+
+    .Sewing {
         margin: 150px 0;
-        .sews{
+
+        .sews {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            .sew{
-                width: calc(50% - (20px*2));
+
+            .sew {
+                width: calc(50% - (20px * 2));
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 margin: 20px;
                 text-align: start;
-                .image{
+
+                .image {
                     width: 70px;
                     height: 70px;
                     background: #BCB8B8;
                     padding: 10px;
                     border-radius: 50%;
-                    img{
+
+                    img {
                         width: 100%;
                         height: 100%;
                     }
                 }
-                .text{
+
+                .text {
                     margin-left: 10px;
                     display: flex;
                     width: 50%;
                     justify-content: space-between;
                     font-weight: 100;
-                    h3{
+
+                    h3 {
                         font-size: 20px;
                     }
-                    p{
+
+                    p {
                         color: #BCB8B8;
                         font-size: 18px;
                     }
                 }
-                @media (max-width:700px) {
+
+                @media (max-width: 700px) {
                     width: 80%;
                 }
+
                 @media (max-width: 420px) {
-                    width: 100%;
+                    width: 100%; /* Полная ширина для мобильных */
                 }
             }
         }
     }
 }
+
 .Application {
     background: url("./../../assets/images/BG/Home/Application.jpg");
     min-height: 70vh !important;
+    background-size: cover;
+    background-position: center;
 
     h2 {
         font-weight: 300;
+        text-align: center;
+        padding: 20px 0;
     }
 
     .form {
-        margin: 150px 0;
+        margin: 150px auto;
         width: 70%;
         display: flex;
         justify-content: space-around;
@@ -195,6 +265,7 @@
             font-size: 18px;
             border: 1px solid #fff;
             margin: 20px;
+            box-sizing: border-box;
         }
 
         p {
@@ -206,6 +277,7 @@
             bottom: -50px;
             left: 50%;
             transform: translateX(-50%);
+
             a {
                 color: #BCB8B8;
                 text-decoration: underline;
@@ -229,47 +301,80 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #A73AFD;
+            background-color: #9330E0;
             transform: translateY(-2px);
         }
 
         input[type="submit"]:active {
-            background-color: #A73AFD;
+            background-color: #7F2AC7;
             transform: translateY(0);
         }
 
-        @media (max-width: 800px) {
-            width: 100%;
-            input {
+        @media (max-width: 1200px) {
+            width: 90%;
+
+            * {
                 width: calc(30% - 40px);
             }
         }
 
-        @media (max-width: 500px) {
-            input {
-                width: 100%;
+        @media (max-width: 900px) {
+            * {
+                width: calc(45% - 40px);
+            }
+
+            input[type="submit"] {
+                width: calc(45% - 40px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            width: 100%;
+            margin: 100px auto;
+
+            * {
+                width: calc(100% - 40px);
+                font-size: 16px;
+            }
+
+            input[type="submit"] {
+                width: calc(100% - 40px);
+                font-size: 18px;
+                padding: 12px;
+                margin-top: 20px;
+            }
+
+            p {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                transform: none;
+                margin-top: 30px;
             }
         }
     }
 }
 
-.Questions{
-    .boxs{
+.Questions {
+    .boxs {
         width: 40%;
         margin-top: 20px;
         transition: 6ms ease-in-out;
-        .ques{
-            .question{
+
+        .ques {
+            .question {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin: 20px 0;
                 border-bottom: 2px solid black;
-                h4{
+
+                h4 {
                     font-size: 20px;
                     font-weight: 500;
                 }
-                button{
+
+                button {
                     background: transparent;
                     border: none;
                     font-size: 40px;
@@ -280,8 +385,13 @@
                 }
             }
         }
+
         @media (max-width: 800px) {
-            width: 80%;
+            width: 80%; /* Уменьшаем ширину для планшетов */
+        }
+
+        @media (max-width: 500px) {
+            width: 100%; /* Полная ширина для мобильных */
         }
     }
 }

@@ -13,7 +13,7 @@ const Application = () => {
 
         const botToken = '7173121762:AAH0oUVwUlao3iIVqeBjDkHajSjcfU3PNxQ';
         const chatId = '1238343405';
-        const text = `Заявка от клиента:\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nМне нужно: ${formData.need}`;
+        const text = `Заявка от клиента:\n\nИмя: ${formData.name}\nМне нужно: ${formData.need}\nТелефон: ${formData.phone}`;
 
         try {
             const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {

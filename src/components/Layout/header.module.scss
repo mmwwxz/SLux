@@ -10,126 +10,157 @@
     right: 0;
     left: 0;
     z-index: 1000;
-  
+
     .logo {
-      width: 30%;
-      img {
-        width: 70px;
-        height: 70px;
-      }
+        width: 30%;
+        img {
+            width: 70px;
+            height: 70px;
+        }
     }
 
     @font-face {
-      font-family: 'MyFont'; /* Название шрифта */
-      src: url('../../assets/fonts/didot_bold.otf') format('truetype'); /* Путь к шрифту */
-      font-weight: normal;
-      font-style: normal;
+        font-family: 'MyFont'; /* Название шрифта */
+        src: url('../../assets/fonts/didot_bold.otf') format('truetype'); /* Путь к шрифту */
+        font-weight: normal;
+        font-style: normal;
     }
 
     .logoText {
-      font-family: 'didot_bold.otf', sans-serif; /* Применяем локальный шрифт */
-      font-size: 34px; /* Размер текста */
-      font-weight: 700; /* Толщина шрифта */
-      color: #000; /* Цвет текста */
-      position: relative;
-      top: -17px; /* Смещаем текст вверх на 10px */
+        font-family: 'MyFont', sans-serif; /* Применяем локальный шрифт */
+        font-size: 34px; /* Размер текста */
+        font-weight: 700; /* Толщина шрифта */
+        color: #000; /* Цвет текста */
+        position: relative;
+        top: -17px; /* Смещаем текст вверх на 10px */
     }
 
     .burger {
-      display: none;
-      cursor: pointer;
-      z-index: 1001;
-  
-      &Line {
-        width: 25px;
-        height: 3px;
-        background-color: #000;
-        margin: 5px;
-        transition: all 0.3s ease;
-      }
-  
-      &.open .burgerLine:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-  
-      &.open .burgerLine:nth-child(2) {
-        opacity: 0;
-      }
-  
-      &.open .burgerLine:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-      }
-    }
-  
-    .link {
-      width: 60%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 20px;
+        display: none;
+        cursor: pointer;
+        z-index: 1001;
 
-    .scrollLink {
-        background: transparent;
-        padding: 5px 10px;
-        font-size: 17px;
-        border-radius: 5px;
-        border: 2px solid gray;
-    }
-  
-      .contact {
-        .socialMedia {
-          a:nth-child(2n) {
-            margin-left: 10px;
-          }
-  
-          img {
-            width: 30px;
-            height: 30px;
-          }
+        &Line {
+            width: 25px;
+            height: 3px;
+            background-color: #000;
+            margin: 5px;
+            transition: all 0.3s ease;
         }
-      }
+
+        &.open .burgerLine:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        &.open .burgerLine:nth-child(2) {
+            opacity: 0;
+        }
+
+        &.open .burgerLine:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
     }
+
+    .link {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 20px;
+
+        .scrollLink {
+            background: transparent;
+            padding: 5px 10px;
+            font-size: 17px;
+            border-radius: 5px;
+            border: 2px solid gray;
+        }
+
+        .contact {
+            .socialMedia {
+                a:nth-child(2n) {
+                    margin-left: 10px;
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    // Адаптивность
+    @media (max-width: 1200px) {
+        padding: 20px 40px;
+        .logo {
+            width: 40%;
+        }
+        .link {
+            width: 70%;
+        }
+    }
+
     @media (max-width: 1000px) {
         justify-content: space-between;
-        .logo{
+        .logo {
             width: fit-content;
         }
-        .link{
+        .link {
             width: 100%;
         }
     }
+
     @media (max-width: 768px) {
-      .burger {
-        display: block;
-      }
-  
-      .link {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #fff;
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-        transition: transform 0.3s ease-in-out;
-        transform: translateY(-100%);
-        opacity: 0;
-        pointer-events: none;
-        a{
-          font-size: 40px;
-          margin: 10px;
+        .burger {
+            display: block;
         }
-      }
-  
-      .link.active {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: all;
-      }
-  
-      .btns, .contact {
-        margin-top: 20px;
-      }
+
+        .link {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #fff;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+            a {
+                font-size: 40px;
+                margin: 10px;
+            }
+        }
+
+        .link.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .btns, .contact {
+            margin-top: 20px;
+        }
     }
-  }  
+
+    @media (max-width: 480px) {
+        height: 60px;
+        padding: 10px 20px;
+
+        .logoText {
+            font-size: 24px; /* Меньший размер текста */
+        }
+
+        .link {
+            font-size: 16px; /* Меньший размер текста */
+        }
+
+        .burgerLine {
+            width: 20px; /* Меньше ширина линии бургера */
+            height: 2px; /* Меньше высота линии бургера */
+        }
+    }
+}

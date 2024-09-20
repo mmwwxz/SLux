@@ -40,7 +40,7 @@ const Header: React.FC = () => {
           </ScrollLink>
 
           <div className={style.contact}>
-            <a href="tel:996 (552) 44-66-44" target="_black">+996 (<span className='span'>552</span>) 44-66-44</a>
+            <a href="tel:+996 (552) 44-66-44" target="_black">+996 (<span className='span'>552</span>) 44-66-44</a>
             <div className={style.socialMedia}>
               <a href="https://wa.me/996552446644" target="_black"><img src={Whatsapp} alt=""/></a>
               <a href="https://t.me/+996552446644" target="_black"><img src={Telegram} alt=""/></a>

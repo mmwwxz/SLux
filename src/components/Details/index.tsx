@@ -1,4 +1,4 @@
-import Banner from './Banner'
-import Price from './Price'
+import Banner from './Banner';
+import Price from './Price';
 
-export {Banner,Price}
+export { Banner, Price };

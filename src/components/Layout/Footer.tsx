@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
         <div className={style.right}>
           <p>г. Бишкек, Молдокулова улица, 28</p>
-          <a href="tel:996 (552) 44-66-44" target="_black">+996 (552) 44-66-44</a>
+          <a href="tel:+996 (552) 44-66-44" target="_black">+996 (552) 44-66-44</a>
           <a href="/" className={style.gmail}>ismailovaiba79@gmail.com</a>
           <div className={style.MAP}>
             <iframe
